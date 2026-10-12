@@ -15,12 +15,13 @@ body {
   padding: 0;
   margin: 0 auto;
   gap: 48px;
-  
 }
 
 .register {
   width: 92px;
   height: 40px;
+  background-color: #FFFFFF;
+  color: #2F80ED;
   position: absolute;
   top: 14px;
   left: 1156px;
@@ -28,7 +29,6 @@ body {
   opacity: 1;
   border-radius: 6px;
   gap: 10px;
-  border: 1px solid;
   padding: 10px 18px;
   box-sizing: border-box;
 }
@@ -36,6 +36,8 @@ body {
 .signin {
   width: 82px;
   height: 40px;
+  background-color: #2f80ed;
+  color: white;
   position: absolute;
   top: 14px;
   left: 1258px;
