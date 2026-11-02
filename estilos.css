@@ -78,6 +78,8 @@ nav {
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
+  list-style: none;
+  text-decoration: none;
 }
 
 .register {
@@ -203,13 +205,20 @@ nav {
   margin: 60px 0 24px 100px;
 }
 
-.movil {
+.playa {
   width: 1240px;
   height: 280px;
   display: flex;
   margin-left: 100px;
   transform: rotate(0deg);
   opacity: 1;
+}
+
+.movil {
+  width: 719.71px;
+  height: 515.6px;
+  top: 1946px;
+  left: 551px;
 }
 
 .cuarto_h1 {
@@ -242,9 +251,7 @@ nav {
   transform: rotate(0deg);
   opacity: 1;
 }
-/* FIN MAIN */
 
-/* FOOTER */
 .avion_2 {
   display: flex;
   align-items: center;
@@ -260,3 +267,11 @@ nav {
   height: 20px;
 }
 
+.footer_1 {
+  width: 225px;
+  height: 70px;
+  margin-left: 100px;
+  top: 2630px;
+  left: 100px;
+  opacity: 1;
+}
