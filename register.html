@@ -1,21 +1,218 @@
-<!doctype html>
-<html lang="es">
-  <link rel="stylesheet" href="estilos.css" />
-  <head>
-    <meta charset="UTF-8" />
-    <title>Iniciar sesión</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="imgAvion_mdp">
-      <img src="images/avion.png" alt="avion" />
-      <p>my Dream Place</p>
-    </div>
-    <h1>Register</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register – my Dream Place</title>
+  <style>
+    :root {
+      --blue: #2f80ed;
+      --blue-dark: #2569c8;
+      --facebook: #475993;
+      --facebook-dark: #3b4a7d;
+      --text: #1f1f1f;
+      --muted: #555;
+      --field: #f1f1f1;
+      --border: #dcdcdc;
+      --bg: #fff;
+    }
 
-    <form>
-      <input type="email" placeholder="Correo electrónico" />
-      <button type="submit">Entrar</button>
-    </form>
-  </body>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    /* ---------- Header ---------- */
+    .site-header {
+      padding: 22px 50px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #333;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .brand img { height: 18px; width: auto; display: block; }
+
+    /* ---------- Layout ---------- */
+    main {
+      display: flex;
+      justify-content: center;
+      padding: 50px 20px 60px;
+    }
+
+    .register-box {
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .register-box h1 {
+      margin: 0 0 36px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    /* ---------- Form ---------- */
+    .field { margin-bottom: 20px; }
+
+    .field label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .field input {
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      background: var(--field);
+      color: var(--text);
+      font: inherit;
+    }
+
+    .field input:focus {
+      outline: none;
+      border-color: var(--blue);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(47, 128, 237, .18);
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      height: 38px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      font: inherit;
+      font-size: 12.5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color .15s ease;
+    }
+
+    .btn:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+    .btn svg { width: 16px; height: 16px; }
+
+    .btn-primary { background: var(--blue); color: #fff; }
+    .btn-primary:hover { background: var(--blue-dark); }
+
+    .btn-google { background: #fff; color: #333; border-color: var(--border); }
+    .btn-google:hover { background: #f7f7f7; }
+
+    .btn-facebook { background: var(--facebook); color: #fff; }
+    .btn-facebook:hover { background: var(--facebook-dark); }
+
+    .btn-facebook svg { fill: #fff; }
+
+    /* ---------- Divider ---------- */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e3e3e3;
+    }
+
+    .social { display: grid; gap: 8px; }
+
+    /* ---------- Footer note ---------- */
+    .signin-link {
+      margin: 36px 0 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    @media (max-width: 600px) {
+      .site-header { padding: 18px 20px; }
+      main { padding-top: 24px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+  <a class="brand" href="/">
+    <img src="images/avion.png" alt="avion" />
+    my Dream Place
+  </a>
+</header>
+
+  <main>
+    <section class="register-box" aria-labelledby="register-title">
+      <h1 id="register-title">Register</h1>
+
+      <form action="#" method="post">
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Continue with email</button>
+      </form>
+
+      <div class="divider">or use one of these options</div>
+
+      <div class="social">
+        <button class="btn btn-google" type="button">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.6 17.7 9.5 24 9.5z"/>
+            <path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.8 7.2l7.6 5.9c4.4-4.1 7-10.1 7-17.6z"/>
+            <path fill="#FBBC05" d="M10.5 28.7A14.5 14.5 0 0 1 9.5 24c0-1.6.3-3.2.8-4.7l-7.9-6.1A24 24 0 0 0 0 24c0 3.9.9 7.5 2.6 10.8l7.9-6.1z"/>
+            <path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.6-5.9c-2.1 1.4-4.9 2.3-8.3 2.3-6.3 0-11.6-4.1-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48z"/>
+          </svg>
+          Continue with Google
+        </button>
+
+        <button class="btn btn-facebook" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h9.2v-7.4H10.2v-2.9h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2 .1 2.3.1v2.6h-1.6c-1.2 0-1.5.6-1.5 1.4v1.9h2.9l-.4 2.9h-2.5V22h4.8a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2z"/>
+          </svg>
+          Continue with Facebook
+        </button>
+      </div>
+
+      <p class="signin-link">Already have an account? <a href="signin.html">Sign in</a></p>
+    </section>
+  </main>
+
+</body>
 </html>
