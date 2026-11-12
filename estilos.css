@@ -125,10 +125,20 @@ nav {
   max-width: 1240px;
   margin: 24px auto 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   border-radius: 8px;
   margin-top: 82px;
+}
+
+.dentro_fondoCovid {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-left: 24px;
+}
+
+.dentro_fondoCovid p {
+  margin: 0;
 }
 
 .primer_h1 {
