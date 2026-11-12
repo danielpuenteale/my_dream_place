@@ -1,3 +1,6 @@
+/* =========================================
+   1. ESTILOS GENERALES
+   ========================================= */
 * {
   box-sizing: border-box;
 }
@@ -8,7 +11,10 @@ body {
   font-family: "SF Pro Display", "Inter", sans-serif;
   width: 1440px;
 }
-/* HEADER */
+
+/* =========================================
+   2. HEADER (Navegación)
+   ========================================= */
 nav {
   display: flex;
   justify-content: space-between;
@@ -39,14 +45,14 @@ nav {
 .imgAvion_mdp p {
   margin: 0;
   font-family: "SF Pro Display", sans-serif;
-  font-weight: 500; /* Medium */
-  font-style: normal; /* "Medium" es el peso, no un estilo */
+  font-weight: 500;
+  font-style: normal;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0.02em;
 }
 
-/* Menú */
+/* Menú de enlaces */
 .ul_nav {
   display: flex;
   align-items: center;
@@ -65,7 +71,7 @@ nav {
   color: #2d7ff0;
 }
 
-/* Botones */
+/* Botones de registro */
 .botones {
   display: flex;
   align-items: center;
@@ -96,9 +102,12 @@ nav {
   color: #fff;
   border: none;
 }
-/* FIN HEADER */
 
-/* MAIN */
+/* =========================================
+   3. MAIN (Contenido Principal)
+   ========================================= */
+
+/* Banner Principal */
 .img_grande_main {
   display: flex;
   justify-content: center;
@@ -106,10 +115,9 @@ nav {
   width: 100%;
   max-width: 1240px;
   height: 500px;
-  margin: 0 auto;
+  margin: 12px auto 0;
   border-radius: 10px;
   overflow: hidden;
-  margin-top: 12px;
 }
 
 .img_grande_main img {
@@ -118,16 +126,16 @@ nav {
   object-fit: cover;
 }
 
+/* Aviso COVID */
 .fondoCovid {
   background-color: #fcefca;
   height: 72px;
   width: 100%;
   max-width: 1240px;
-  margin: 24px auto 0;
+  margin: 82px auto 50px;
   display: flex;
   align-items: center;
   border-radius: 8px;
-  margin-top: 82px;
 }
 
 .dentro_fondoCovid {
@@ -141,6 +149,7 @@ nav {
   margin: 0;
 }
 
+/* Sección 1: Enjoy your dream vacation */
 .primer_h1 {
   font-family: "SF Pro Display", sans-serif;
   font-weight: 600;
@@ -165,14 +174,6 @@ nav {
   margin-left: 100px;
 }
 
-.segundo_h1 {
-  font-family: "SF Pro Display", sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 100%;
-  margin: 40px 0 24px 100px;
-}
-
 .destinos {
   display: flex;
   gap: 20px;
@@ -187,6 +188,16 @@ nav {
   object-fit: cover;
 }
 
+/* Sección 2: Get inspiration */
+.segundo_h1 {
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
+  margin: 40px 0 24px 100px;
+}
+
+/* Nota: Esta clase también la usas más abajo en Popular Hotels */
 .destinos_2 {
   display: flex;
   gap: 20px;
@@ -201,21 +212,18 @@ nav {
   object-fit: cover;
 }
 
+/* Sección 3: Popular hotels */
 .tercer_h1 {
   font-family: "SF Pro Display", sans-serif;
   font-weight: 600;
   font-size: 28px;
   line-height: 100%;
   max-width: 1240px;
-  margin: 60px auto 24px;
-  padding: 0;
-  font-family: "SF Pro Display", sans-serif;
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 100%;
   margin: 60px 0 24px 100px;
+  padding: 0;
 }
 
+/* Banner Playa y Textos Finales */
 .playa {
   width: 1240px;
   height: 280px;
@@ -223,13 +231,6 @@ nav {
   margin-left: 100px;
   transform: rotate(0deg);
   opacity: 1;
-}
-
-.movil {
-  width: 719.71px;
-  height: 515.6px;
-  top: 1946px;
-  left: 551px;
 }
 
 .cuarto_h1 {
@@ -263,6 +264,18 @@ nav {
   opacity: 1;
 }
 
+/* =========================================
+   4. FOOTER (Pie de página)
+   ========================================= */
+.footer_1 {
+  width: 225px;
+  height: 70px;
+  margin-left: 100px;
+  top: 2630px;
+  left: 100px;
+  opacity: 1;
+}
+
 .avion_2 {
   display: flex;
   align-items: center;
@@ -273,16 +286,12 @@ nav {
   color: #1f2937;
 }
 
-.imgAvion_mdp img {
-  width: 20px;
-  height: 20px;
-}
-
-.footer_1 {
-  width: 225px;
-  height: 70px;
-  margin-left: 100px;
-  top: 2630px;
-  left: 100px;
-  opacity: 1;
+/* =========================================
+   5. CLASES SIN USAR EN EL HTML ACTUAL
+   ========================================= */
+.movil {
+  width: 719.71px;
+  height: 515.6px;
+  top: 1946px;
+  left: 551px;
 }
